@@ -1,5 +1,6 @@
 import React from "react";
 import ProductList from "./components/ProductList";
+import Product from "./components/Product";
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,7 +19,7 @@ function App() {
             <ProductList></ProductList>
           </Route>
           <Route path='/product/:id'>
-            Hola
+            <Product></Product>
           </Route>
         </Switch>
       </Router>
