@@ -1,14 +1,14 @@
-import React, {useState, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const Product = () => {
-    const {} = useParams()
+    const {id} = useParams()
     const [product, setProduct]= useState([])
 
     const obtenerProducto = async() => {
         const res = await axios.get(`https://first-ecommerce-go.herokuapp.com/products/${id}`)
-        const user = await res.data
+        const product = await res.data
         setProduct(product)
     }
 
